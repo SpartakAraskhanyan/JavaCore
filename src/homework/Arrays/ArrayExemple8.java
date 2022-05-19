@@ -7,9 +7,9 @@ public class ArrayExemple8 {
         int[] array = {2, 5, 8, 10, 32, 22, 11, 66, 12, 30};
         int j = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0)
-                 j++;
-
+            if (array[i] % 2 == 0) {
+                j++;
+            }
 
 
         }
