@@ -44,8 +44,8 @@ public class CharaArrayExemple {
         char[] bobArray = {'b', 'a', 'b', 'o', 'l', 'a'};
         boolean y = false;
 
-        for (int j = 0; j < bobArray.length; j++) {
-            if (bobArray[j] == 'b' && bobArray[j + 2] == 'b') {
+        for (int j = 0; j < bobArray.length -2; j++) {
+            if (bobArray[j] == 'b' && bobArray[j +2] == 'b') {
                 y = true;
 
             }
