@@ -70,10 +70,12 @@ public class ArrayUtil {
         }
         return av;
     }
-    int ArraySum(int[]array){
+
+    int arraySum(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
-        }return sum;
+        }
+        return sum;
     }
 }

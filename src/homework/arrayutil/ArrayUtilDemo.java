@@ -5,6 +5,7 @@ public class ArrayUtilDemo {
     public static void main(String[] args) {
         int[] numbers = {2, 4, 6, 1, 9, 6};
         ArrayUtil au = new ArrayUtil();
+
         System.out.println("max = " + au.max(numbers));
         System.out.println();
         System.out.println("min = " + au.min(numbers));
@@ -19,6 +20,6 @@ public class ArrayUtilDemo {
         System.out.println();
         System.out.println("av = " + au.AveregeValue(numbers));
         System.out.println();
-        System.out.println("sum = " + au.ArraySum(numbers));
+        System.out.println("sum = " + au.arraySum(numbers));
     }
 }
