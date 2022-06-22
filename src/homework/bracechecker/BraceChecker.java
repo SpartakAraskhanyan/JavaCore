@@ -29,39 +29,39 @@ public class BraceChecker {
                     break;
 
                 case ')':
-                    char s = (char) stack.pop();
-                    if (s != '(') {
+                    int s = (int) stack.pop();
+                    if (s == 0) {
+                        System.out.println("Error: closed " + c + "but not opened at" + i);
+
+                    } else if (s != '(') {
                         System.out.println("Error:" + "opened" + s + " " + "but closed" + chars[i] + i);
-                    }else if (s != '[' || s != '{'){
-
-                        System.out.println("Error:" + "not opened" + s + " " + "but closed" + chars[i] + i);
                     }
-
-                    break;
                 case '}':
-                    char x = (char) stack.pop();
-                    if (x != '{') {
+                    int x = (int) stack.pop();
+                    if (x == 0) {
+                        System.out.println("Error: closed " + c + "but not opened at" + i);
+
+
+                    } else if (x != '{') {
                         System.out.println("Error:" + "opened" + x + " " + "but closed" + chars[i] + i);
-                    }else if (x != '[' || x != '('){
-
-                        System.out.println("Error:" + "not opened" + x + " " + "but closed" + chars[i] + i);
                     }
-                    break;
+
+
+
                 case ']':
-                    char y = (char) stack.pop();
-                    if (y != '[') {
-                        System.out.println("Error:" + "opened" + y + " " + "but closed" + chars[i] + i);
-                    }else if (y != '(' || y != '{'){
+                    int y = (int) stack.pop();
+                    if (y == 0) {
+                        System.out.println("Error: closed " + c + "but not opened at" + i);
 
-                        System.out.println("Error:" + "not opened" + y + " " + "but closed" + chars[i] + i);
+                    } else if (y != '[') {
+                        System.out.println("Error:" + "opened" + y + " " + "but closed" + chars[i] + i);
                     }
-                    break;
 
 
             }
-
 
         }
     }
 
 }
+

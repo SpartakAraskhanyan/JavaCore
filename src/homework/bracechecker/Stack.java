@@ -13,15 +13,16 @@ public class Stack {
         if (size == array.length) {
         } else {
             array[++size] = volue;
+
         }
     }
+
 
     public int pop() {
+
         if (size < 0) {
             return 0;
-        } else {
+        } else
             return array[size--];
-        }
     }
-
 }
