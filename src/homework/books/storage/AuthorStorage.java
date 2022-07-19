@@ -1,15 +1,17 @@
-package homework.students;
+package homework.books.storage;
 
-public class StudentStorage {
+import homework.books.exception.AuthorNotFoundException;
+import homework.books.model.Author;
 
-    private Student[] array = new Student[10];
+public class AuthorStorage {
+    private Author[] array = new Author[10];
     private int size = 0;
 
-    public void add(Student student) {
+    public void add(Author author) {
         if (array.length == size) {
             extend();
         }
-        array[size++] = student;
+        array[size++] = author;
     }
 
     public void printArray() {
@@ -19,7 +21,7 @@ public class StudentStorage {
     }
 
     private void extend() {
-        Student[] temp = new Student[array.length + 10];
+        Author[] temp = new Author[array.length + 10];
         for (int i = 0; i < array.length; i++) {
             temp[i] = array[i];
         }
@@ -39,28 +41,16 @@ public class StudentStorage {
     }
 
 
-    public void printStudentsByLessonName(String lessonName) {
-        for (int i = 0; i < size; i++) {
-            if (array[i].getLesson().equals(lessonName)) {
-                System.out.println(array[i]);
-            }
-
-        }
-    }
-
     public int getSize() {
         return size;
     }
 
-    public Student getStudentByIndex(int index) {
+    public Author getAuthorIndex(int index) throws AuthorNotFoundException {
         if (index < 0 || index >= size) {
-
-            return null;
+            throw new AuthorNotFoundException("Author with " + index + " does noy exists");
         }
         return array[index];
     }
+
+
 }
-
-
-
-

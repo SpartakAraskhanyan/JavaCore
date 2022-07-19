@@ -47,7 +47,6 @@ public class BraceChecker {
                     }
 
 
-
                 case ']':
                     int y = (int) stack.pop();
                     if (y == 0) {
